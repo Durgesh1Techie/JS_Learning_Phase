@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durgesh Pratap singh | DOM</title>
+</head>
+<body style="background-color: black;color: wheat;">
+    <ul class="Language">
+        <li>
+            JavaScript
+        </li>
+
+    </ul>
+    
+</body>
+<script>
+    // function addlanguage(langname){
+    //     const listitem = document.createElement('li')
+    //    listitem.innerHTML = ` ${langname}`
+    //    document.querySelector('.Language').appendChild(listitem)
+
+    
+
+    // }
+    function addoptilanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.Language').appendChild(li)
+
+    }
+    addoptilanguage("Python")
+    addoptilanguage("TypeScript")
+    addoptilanguage("goLAng")
+    addoptilanguage("java")
+
+    // remove of element
+    // const secondlang = document.querySelector("li:nth-child(2)")
+    secondlang.innerHTML = "mojo"
+    // console.log(secondlang); 
+    const newli = document.createElement('li')
+    newli.textContent = "Ai"
+    secondlang.replaceWith(newli)
+
+    //edit
+ const firstlang = document.querySelector("li:first-child")
+ firstlang.outerHTML = '<li>TypeScript</li>'
+
+ ///
+ const lastlang = document.querySelector('li:last-child')
+ lastlang.remove()
+</script>
+</html>

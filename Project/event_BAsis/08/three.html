@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur javascript
+    </h1>
+    <button class="stop">stop</button>
+    <button class="start">start</button>
+</body>
+<script>
+//    const sayname = function(){
+//     console.log("Durgesh");
+//    }
+//   const changetext = function(){ 
+//     document.querySelector('h1').innerHTML
+//      = "Best JS"}
+
+
+
+//   const chnangeme =setTimeout(changetext,5000)
+let inter; 
+const sayname = function () {
+    console.log("Durgesh",Date.now());
+   
+ }
+const startprint = function(){
+   console.log("start")
+   inter = setInterval(sayname,2000);
+}
+const stopprint = function(){
+   console.log("stopped")
+   clearInterval(inter);
+}
+
+document.querySelector('.start').addEventListener('click',startprint)
+document.querySelector('.stop').addEventListener('click',stopprint)
+
+
+ 
+</script>
+
+</html>
